@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
+  </head>
+  <body>
+    <svg id="word-cloud" width="960" height="600"></svg>
+
+    <script>
+      var words = [
+        "Avoiding Data Swamps",
+        "Cost-Efficiency",
+        "Customer Responsiveness",
+        "Competitive Edge",
+        "Regulatory Compliance",
+        "Data Integrity",
+        "Operational Agility",
+        "Scalability",
+        "Data Democratization",
+        "Strategic Alignment",
+      ];
+
+      // Define a color scale
+      var color = d3.scaleOrdinal(d3.schemeCategory10);
+
+      var layout = d3.layout
+        .cloud()
+        .size([720, 400])
+        .words(
+          words.map(function (d) {
+            return { text: d };
+          })
+        )
+        .padding(5)
+        .rotate(0) // Keeps the words horizontal
+        .fontSize(30)
+        .on("end", draw);
+
+      layout.start();
+
+      function draw(words) {
+        d3.select("#word-cloud")
+          .append("g")
+          .attr(
+            "transform",
+            "translate(" +
+              layout.size()[0] / 2 +
+              "," +
+              layout.size()[1] / 2 +
+              ")"
+          )
+          .selectAll("text")
+          .data(words)
+          .enter()
+          .append("text")
+          .style("font-size", function (d) {
+            return d.size + "px";
+          })
+          .style("fill", function (d, i) {
+            return color(i); // Apply color scale
+          })
+          .attr("text-anchor", "middle")
+          .attr("transform", function (d) {
+            return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+          })
+          .text(function (d) {
+            return d.text;
+          });
+      }
+    </script>
+  </body>
+</html>

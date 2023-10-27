@@ -6,21 +6,165 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-
-    <title>Data Strategies - reveal.js</title>
-
+    <title>Modern Data Strategy</title>
     <link rel="stylesheet" href="dist/reset.css" />
     <link rel="stylesheet" href="dist/reveal.css" />
     <link rel="stylesheet" href="dist/theme/black.css" />
-
-    <!-- Theme used for syntax highlighted code -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css" />
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
-        <section>Slide 1</section>
-        <section>Slide 2</section>
+        <section>Modern Data Strategy</section>
+
+        <section>
+          <div style="float: left; width: 50%">
+            <h2>Why Data Strategy Matters</h2>
+          </div>
+          <div style="float: right; width: 50%">
+            <ul>
+              <li>Why data strategy matters</li>
+              <li>The scope of this presentation</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Why Data Strategy Matters</h2>
+          <div
+            style="
+              position: relative;
+              border: 1px solid tomato;
+              padding: 5px;
+              width: 820px;
+              height: 420px;
+              margin: 0 auto;
+            "
+          >
+            <iframe
+              src="wordcloud.html"
+              width="1000"
+              height="1000"
+              style="z-index: 1"
+            ></iframe>
+          </div>
+          <!-- Add your link here -->
+          <div style="margin-top: 15px; text-align: center">
+            <a
+              href="#/appendix-slide"
+              class="navigate-right"
+              style="text-decoration: underline"
+            >
+              Go to Appendix
+            </a>
+          </div>
+        </section>
+
+        <!-- Data Strategy Overview -->
+        <section>
+          <div style="float: left; width: 50%">
+            <h2>Data Strategy Overview</h2>
+          </div>
+          <div style="float: right; width: 50%">
+            <ul>
+              <li>Traditional</li>
+              <li>Modern</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div style="float: left; width: 50%">
+            <h2>Data Mesh</h2>
+          </div>
+          <div style="float: right; width: 50%">
+            <ul>
+              <li>Concept & Advantages</li>
+              <li>Implementation Challenges</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div style="float: left; width: 50%">
+            <h2>Data Products</h2>
+          </div>
+          <div style="float: right; width: 50%">
+            <ul>
+              <li>Data as a Product</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div style="float: left; width: 50%">
+            <h2>Platform Services</h2>
+          </div>
+          <div style="float: right; width: 50%">
+            <li>Role & Function</li>
+            <li>Examples</li>
+          </div>
+        </section>
+
+        <section>
+          <div style="float: left; width: 50%">
+            <h2>Federated Governance</h2>
+          </div>
+          <div style="float: right; width: 50%">
+            <ul>
+              <li>Definition & Role</li>
+              <li>Advantages & Disadvantages</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div style="float: left; width: 50%">
+            <h2>Data Quality</h2>
+          </div>
+          <div style="float: right; width: 50%">
+            <ul>
+              <li>Quality at the Source</li>
+              <li>AI in Data Quality</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div style="float: left; width: 50%">
+            <h2>Policies and Standards</h2>
+          </div>
+          <div style="float: right; width: 50%">
+            <ul>
+              <li>Importance</li>
+              <li>Examples</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div style="float: left; width: 50%">
+            <h2>Federated Governance and Compliance</h2>
+          </div>
+          <div style="float: right; width: 50%">
+            <ul>
+              <li>How They Intersect</li>
+              <li>Case Studies</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div style="float: left; width: 50%">
+            <h2>Conclusion</h2>
+          </div>
+          <div style="float: right; width: 50%">
+            <ul>
+              <li>Summary of Key Points</li>
+              <li>Final Thoughts</li>
+            </ul>
+          </div>
+        </section>
       </div>
     </div>
 
@@ -29,13 +173,8 @@
     <script src="plugin/markdown/markdown.js"></script>
     <script src="plugin/highlight/highlight.js"></script>
     <script>
-      // More info about initialization & config:
-      // - https://revealjs.com/initialization/
-      // - https://revealjs.com/config/
       Reveal.initialize({
         hash: true,
-
-        // Learn about plugins: https://revealjs.com/plugins/
         plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
       });
     </script>
