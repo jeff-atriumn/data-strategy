@@ -3,6 +3,11 @@
   <head>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
+    <style>
+      .word {
+        font-family: Arial, sans-serif; /* Specify the font you want to use */
+      }
+    </style>
   </head>
   <body>
     <svg id="word-cloud" width="960" height="600"></svg>
@@ -54,6 +59,7 @@
           .data(words)
           .enter()
           .append("text")
+          .attr("class", "word") // Apply the "word" class to the text elements
           .style("font-size", function (d) {
             return d.size + "px";
           })
